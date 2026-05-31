@@ -1,3 +1,19 @@
+CREATE TABLE IF NOT EXISTS wildfires (
+    latitude        DECIMAL(9,6)    NOT NULL,
+    longitude       DECIMAL(9,6)    NOT NULL,
+    acq_date        DATE            NOT NULL,
+    acq_time        VARCHAR(4)      NOT NULL,
+    daynight        VARCHAR(1)      NOT NULL CHECK (daynight IN ('D', 'N')),
+    frp             DECIMAL(10,2),
+    confidence      VARCHAR(10),
+    bright_ti4      DECIMAL(10,2),
+    satellite       VARCHAR(10),
+    instrument      VARCHAR(20),
+    location        GEOMETRY(POINT, 4326),
+    created_at      TIMESTAMP       DEFAULT NOW(),
+    PRIMARY KEY (latitude, longitude, acq_date, acq_time)
+);
+
 CREATE TABLE IF NOT EXISTS earthquakes (
     id              VARCHAR(20)     PRIMARY KEY,
     latitude        DECIMAL(9,6)    NOT NULL,

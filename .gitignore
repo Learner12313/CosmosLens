@@ -7,56 +7,17 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-*.egg-info/
-dist/
-build/
-*.egg
+*.pyc
 venv/
 .venv/
-env/
-*.pkl
-*.h5
-*.joblib
-
-# FastAPI backend
-backend/venv/
-backend/.venv/
-backend/__pycache__/
-
-# ML service
-ml-service/venv/
-ml-service/.venv/
-ml-service/__pycache__/
-ml-service/data/raw/
-ml-service/models/trained/
-
-# Frontend (React + Vite)
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
 
 # IDE
-.idea/
 .vscode/
-*.iml
-*.swp
-*.swo
+.idea/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Docker volumes
-docker/postgres-data/
-docker/redis-data/
-
 # Logs
 *.log
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Model files (large)
-*.onnx
